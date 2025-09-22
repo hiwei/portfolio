@@ -1,0 +1,11 @@
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /raw-test/
+
+  # 如果請求的不是實體檔案或資料夾
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+
+  # 所有其他請求都導向 index.html，但網址不改變
+  RewriteRule ^ index.html [L]
+</IfModule>
