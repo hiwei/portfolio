@@ -21,7 +21,6 @@ body
     background: #FFF
     color: #111
     font-family: 'Noto Serif TC'
-    min-height: 100vh
     &.fix
         overflow: hidden
 *
@@ -147,6 +146,7 @@ a
             font-weight: normal
             text-align: right
             color: #555
+            font-size: 1.5vw
             &::before
                 position: absolute
                 display: block
@@ -164,6 +164,7 @@ a
         align-items: flex-start
         margin-top: 10%
         .content-title
+            z-index: 1
             position: sticky
             top: 0
             left: 0
@@ -359,3 +360,148 @@ a
 @media only screen and (max-width: 1024px)
     .for-pc
         display: none! important
+
+    body
+        overflow: hidden
+        .wrap
+            overflow-y: auto
+            -webkit-overflow-scrolling: touch
+
+    .loading
+        p
+            width: 15vw
+            height: 15vw
+
+    .lightbox
+        backdrop-filter: blur(1.5vw)
+        .lightbox-close
+            z-index: 1
+            font-size: 4vw
+            width: 7vw
+            height: 7vw
+            border-width: 1px
+        .lightbox-block
+            top: 2.5%
+            width: 95%
+            height: 95%
+            border-radius: 0 5vw 5vw 0
+        .lightbox-banner
+            .main-video
+                width: 100%
+                padding-top: 56.25%
+                +r(3vw)
+                filter: drop-shadow(-1vw 1vw 0 $vise)
+            .main-image
+                width: 100%
+                +r(3vw)
+                filter: drop-shadow(-1vw 1vw 0 $vise)
+            h3
+                position: relative
+                top: 0
+                font-size: 3vw
+                padding: 5% 0
+                &::before
+                    width: 30vw
+                    height: 20vw
+                    transform: translate(-125%, -25%)
+        .lightbox-content
+            margin-top: 5%
+            .content-title
+                top: 10%
+                width: 10%
+                a
+                    font-size: 5vw
+                    padding: 10% 15%
+                    margin-left: -15%
+                    &::before
+                        white-space: nowrap
+                h4
+                    font-size: 4vw
+                    padding-left: 0
+                    br
+                        display: none
+            article
+                &::before
+                    width: 20vw
+                    height: 20vw
+                    bottom: 0
+                    left: -10%
+                .article-div
+                    font-size: 3.5vw
+                    p
+                        text-align: right
+                        width: 90%
+                    .video-div,
+                    .video-flex
+                        margin: 8% 0
+                        &::before
+                            font-size: 3vw
+                    .video-div
+                        video
+                            +r(2vw)
+                        &:nth-child(even)
+                            width: 90%! important
+                            padding-top: calc(56.25% * 0.9)! important
+                            margin-left: 10%! important
+                            &::before
+                                top: 20%! important
+                                bottom: auto! important
+                                left: -3%! important
+                                right: auto! important
+                        &:nth-child(odd)
+                            width: 90%! important
+                            padding-top: calc(56.25% * 0.9)! important
+                            margin-left: 0! important
+                            &::before
+                                top: 20%! important
+                                bottom: auto! important
+                                left: auto! important
+                                right: -3%! important
+                    .video-flex
+                        display: block
+                        width: 100%! important
+                        .video-flex-block
+                            width: 70%
+                            padding-top: calc( percentage(1164/720)*0.70 )
+                            margin: 8% 0! important
+                            video
+                                +r(2vw)
+                            &:nth-child(even)
+                                margin-left: 2%! important
+                            &:nth-child(odd)
+                                margin-left: 25%! important
+                        &:nth-child(even)
+                            margin-left: 0! important
+                            &::before
+                                top: 47%! important
+                                bottom: auto! important
+                                left: 22%! important
+                                right: auto! important
+                        &:nth-child(odd)
+                            margin-left: 0! important
+                            &::before
+                                top: 47%! important
+                                bottom: auto! important
+                                right: 70%! important
+                                left: auto! important
+
+                .article-img
+                    > div
+                        margin: 8% 0! important
+                        &:nth-child(even)
+                            width: 90%! important
+                            margin-left: 10%! important
+                        &:nth-child(odd)
+                            width: 90%! important
+                            margin-left: %! important
+                        img
+                            +r(2vw)
+                            &.m
+                                width: 65%
+
+@media only screen and (max-width: 640px)
+    .lightbox
+        .lightbox-close
+            font-size: 5vw
+            width: 9vw
+            height: 9vw

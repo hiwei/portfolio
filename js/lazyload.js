@@ -1,8 +1,20 @@
 $(function() {
+    var $scrollContainer;
     var loadImages = lazyload();
-    loadImages();
-    window.addEventListener('scroll', throttle(loadImages, 500, 1000), false);
-    // pc or mb
+    var throttledLoad = throttle(loadImages, 500, 1000);
+
+    function bindLazyScroll() {
+        if ($scrollContainer) {
+            $scrollContainer.off('scroll', throttledLoad);
+        }
+        $scrollContainer = (window.innerWidth <= 1024) ? $('.wrap') : $(window);
+        $scrollContainer.on('scroll', throttledLoad);
+        loadImages();
+    }
+
+    bindLazyScroll();
+    $(window).on('resize', bindLazyScroll);
+
     if(window.innerWidth <= 1024) {
         $('[data-lazy-background]').each(function() {
             if(typeof $(this).data('lazy-background-m') !== 'undefined' && $(this).data('lazy-background-m') !== '') {
@@ -15,10 +27,11 @@ $(function() {
             }
         })
     }
-})
+});
+
 function throttle(fn, delay, atleast) {
     var timeout = null,
-    startTime = new Date();
+        startTime = new Date();
     return function() {
         var curTime = new Date();
         clearTimeout(timeout);
@@ -30,18 +43,26 @@ function throttle(fn, delay, atleast) {
         }
     }
 }
+
 function lazyload() {
     return function() {
         var seeHeight = document.documentElement.clientHeight;
-        var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+        var scrollTop;
+
+        if(window.innerWidth <= 1024) {
+            scrollTop = $('.wrap').scrollTop();
+        } else {
+            scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+        }
+
         $('[data-lazy-background]').each(function() {
             if($(this).offset().top < seeHeight + scrollTop + window.innerHeight*1.5) {
-                $(this).css('background', 'url('+$(this).data('lazy-background')+')')
+                $(this).css('background', 'url('+$(this).data('lazy-background')+')');
             }
         });
         $('[data-lazy-img]').each(function() {
             if($(this).offset().top < seeHeight + scrollTop + window.innerHeight*1.5) {
-                $(this).attr('src', $(this).data('lazy-img'))
+                $(this).attr('src', $(this).data('lazy-img'));
             }
         });
     }

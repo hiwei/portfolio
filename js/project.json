@@ -6,7 +6,7 @@
             "company": "Fuji Water",
             "mainImg": "",
             "mainVideo": "img/project/p-1-vid.mp4",
-            "content": "123<br>富士の湧水富士の湧水<br>富士の湧水富士の湧水<br>富士の湧水富士の湧水<br>富士の湧",
+            "content": "<p>123<br>富士の湧水富士の湧水<br>富士の湧水富士の湧水<br>富士の湧水富士の湧水<br>富士の湧</p>",
             "website": "https://fujiwater.com.tw/",
             "images": [
                 "img/project/p-1-1.jpg",
@@ -123,7 +123,7 @@
             "company": "SUZUKI",
             "mainImg": "",
             "mainVideo": "img/project/p-8-vid.mp4",
-            "content": "<div class='video-div'><video muted autoplay loop src='img/project/p-8-vid-1.mp4' type='video/mp4'></video></div><div class='video-div'><video muted autoplay loop src='img/project/p-8-vid-2.mp4' type='video/mp4'></video></div><div class='video-div'><video muted autoplay loop src='img/project/p-8-vid-3.mp4' type='video/mp4'></video></div>",
+            "content": "<div class='video-div'><video muted autoplay playsinline loop src='img/project/p-8-vid-1.mp4' type='video/mp4'></video></div><div class='video-div'><video muted autoplay playsinline loop src='img/project/p-8-vid-2.mp4' type='video/mp4'></video></div><div class='video-div'><video muted autoplay playsinline loop src='img/project/p-8-vid-3.mp4' type='video/mp4'></video></div>",
             "website": "",
             "images": [
                 "img/project/p-8-1.jpg",
@@ -139,7 +139,7 @@
             "company": "Starbucks",
             "mainImg": "img/project/p-9-main.jpg",
             "mainVideo": "",
-            "content": "<div class='video-flex'><div class='video-flex-block'><video muted autoplay loop src='img/project/p-9-vid-1.mp4' type='video/mp4'></video></div><div class='video-flex-block'><video muted autoplay loop src='img/project/p-9-vid-2.mp4' type='video/mp4'></video></div></div><div class='video-flex'><div class='video-flex-block'><video muted autoplay loop src='img/project/p-9-vid-3.mp4' type='video/mp4'></video></div><div class='video-flex-block'><video muted autoplay loop src='img/project/p-9-vid-4.mp4' type='video/mp4'></video></div></div><div class='video-flex'><div class='video-flex-block'><video muted autoplay loop src='img/project/p-9-vid-5.mp4' type='video/mp4'></video></div><div class='video-flex-block'><video muted autoplay loop src='img/project/p-9-vid-6.mp4' type='video/mp4'></video></div></div><div class='video-flex'><div class='video-flex-block'><video muted autoplay loop src='img/project/p-9-vid-7.mp4' type='video/mp4'></video></div></div>",
+            "content": "<div class='video-flex'><div class='video-flex-block'><video muted autoplay playsinline loop src='img/project/p-9-vid-1.mp4' type='video/mp4'></video></div><div class='video-flex-block'><video muted autoplay playsinline loop src='img/project/p-9-vid-2.mp4' type='video/mp4'></video></div></div><div class='video-flex'><div class='video-flex-block'><video muted autoplay playsinline loop src='img/project/p-9-vid-3.mp4' type='video/mp4'></video></div><div class='video-flex-block'><video muted autoplay playsinline loop src='img/project/p-9-vid-4.mp4' type='video/mp4'></video></div></div><div class='video-flex'><div class='video-flex-block'><video muted autoplay playsinline loop src='img/project/p-9-vid-5.mp4' type='video/mp4'></video></div><div class='video-flex-block'><video muted autoplay playsinline loop src='img/project/p-9-vid-6.mp4' type='video/mp4'></video></div></div><div class='video-flex'><div class='video-flex-block'><video muted autoplay playsinline loop src='img/project/p-9-vid-7.mp4' type='video/mp4'></video></div></div>",
             "website": "",
             "images": [
             ]

@@ -21,6 +21,8 @@
 
 .project-kv
     position: relative
+    width: 100%
+    padding-top: percentage(458/1024)
     h1
         position: absolute
         font-family: DM Serif Display
@@ -37,6 +39,11 @@
             +centerAb
             background: $vise
     img
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
         filter: drop-shadow(3px 0px 0 $main)
 
 .project-content
@@ -46,7 +53,8 @@
     flex-wrap: wrap
     gap: 5vw
     width: 80%
-    margin: 5% auto 10% auto
+    padding: 5% 0 10% 0
+    margin: 0 auto
     .project-block
         position: relative
         width: 28%
@@ -188,3 +196,48 @@
                             filter: drop-shadow(2px 2px 0 $vise)
                         > div
                             transform: scale(1)
+
+@media only screen and (max-width: 1024px)
+
+    .project-kv
+        overflow: hidden
+        padding-top: percentage(274/350)
+        h1
+            top: 40%
+            font-size: 14vw
+            &::before
+                height: 3px
+        img
+            width: 175%
+            left: 50%
+            transform: translateX(-50%)
+
+    .project-content
+        gap: 5vw
+        width: 90%
+        .project-block
+            width: 28%
+            .project-img
+                &::before
+                    display: none
+            h2
+                font-size: 2.5vw
+                &::before
+                    display: none
+            p
+                font-size: 2vw
+
+    .back
+        font-size: 4vw
+
+@media only screen and (max-width: 640px)
+    .project-content
+        gap: 6vw
+        .project-block
+            width: 45%
+            h2
+                font-size: 4vw
+            p
+                font-size: 3vw
+    .back
+        font-size: 6vw

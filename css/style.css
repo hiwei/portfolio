@@ -20,7 +20,6 @@ body {
   background: #FFF;
   color: #111;
   font-family: "Noto Serif TC";
-  min-height: 100vh;
 }
 body.fix {
   overflow: hidden;
@@ -176,6 +175,7 @@ a {
   font-weight: normal;
   text-align: right;
   color: #555;
+  font-size: 1.5vw;
 }
 .lightbox .lightbox-banner h3::before {
   position: absolute;
@@ -196,6 +196,7 @@ a {
   margin-top: 10%;
 }
 .lightbox .lightbox-content .content-title {
+  z-index: 1;
   position: sticky;
   top: 0;
   left: 0;
@@ -443,5 +444,188 @@ a {
 @media only screen and (max-width: 1024px) {
   .for-pc {
     display: none !important;
+  }
+  body {
+    overflow: hidden;
+  }
+  body .wrap {
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .loading p {
+    width: 15vw;
+    height: 15vw;
+  }
+  .lightbox {
+    -webkit-backdrop-filter: blur(1.5vw);
+            backdrop-filter: blur(1.5vw);
+  }
+  .lightbox .lightbox-close {
+    z-index: 1;
+    font-size: 4vw;
+    width: 7vw;
+    height: 7vw;
+    border-width: 1px;
+  }
+  .lightbox .lightbox-block {
+    top: 2.5%;
+    width: 95%;
+    height: 95%;
+    border-radius: 0 5vw 5vw 0;
+  }
+  .lightbox .lightbox-banner .main-video {
+    width: 100%;
+    padding-top: 56.25%;
+    border-radius: 3vw;
+    -webkit-border-radius: 3vw;
+    filter: drop-shadow(-1vw 1vw 0 #fff022);
+  }
+  .lightbox .lightbox-banner .main-image {
+    width: 100%;
+    border-radius: 3vw;
+    -webkit-border-radius: 3vw;
+    filter: drop-shadow(-1vw 1vw 0 #fff022);
+  }
+  .lightbox .lightbox-banner h3 {
+    position: relative;
+    top: 0;
+    font-size: 3vw;
+    padding: 5% 0;
+  }
+  .lightbox .lightbox-banner h3::before {
+    width: 30vw;
+    height: 20vw;
+    transform: translate(-125%, -25%);
+  }
+  .lightbox .lightbox-content {
+    margin-top: 5%;
+  }
+  .lightbox .lightbox-content .content-title {
+    top: 10%;
+    width: 10%;
+  }
+  .lightbox .lightbox-content .content-title a {
+    font-size: 5vw;
+    padding: 10% 15%;
+    margin-left: -15%;
+  }
+  .lightbox .lightbox-content .content-title a::before {
+    white-space: nowrap;
+  }
+  .lightbox .lightbox-content .content-title h4 {
+    font-size: 4vw;
+    padding-left: 0;
+  }
+  .lightbox .lightbox-content .content-title h4 br {
+    display: none;
+  }
+  .lightbox .lightbox-content article::before {
+    width: 20vw;
+    height: 20vw;
+    bottom: 0;
+    left: -10%;
+  }
+  .lightbox .lightbox-content article .article-div {
+    font-size: 3.5vw;
+  }
+  .lightbox .lightbox-content article .article-div p {
+    text-align: right;
+    width: 90%;
+  }
+  .lightbox .lightbox-content article .article-div .video-div,
+  .lightbox .lightbox-content article .article-div .video-flex {
+    margin: 8% 0;
+  }
+  .lightbox .lightbox-content article .article-div .video-div::before,
+  .lightbox .lightbox-content article .article-div .video-flex::before {
+    font-size: 3vw;
+  }
+  .lightbox .lightbox-content article .article-div .video-div video {
+    border-radius: 2vw;
+    -webkit-border-radius: 2vw;
+  }
+  .lightbox .lightbox-content article .article-div .video-div:nth-child(even) {
+    width: 90% !important;
+    padding-top: 50.625% !important;
+    margin-left: 10% !important;
+  }
+  .lightbox .lightbox-content article .article-div .video-div:nth-child(even)::before {
+    top: 20% !important;
+    bottom: auto !important;
+    left: -3% !important;
+    right: auto !important;
+  }
+  .lightbox .lightbox-content article .article-div .video-div:nth-child(odd) {
+    width: 90% !important;
+    padding-top: 50.625% !important;
+    margin-left: 0 !important;
+  }
+  .lightbox .lightbox-content article .article-div .video-div:nth-child(odd)::before {
+    top: 20% !important;
+    bottom: auto !important;
+    left: auto !important;
+    right: -3% !important;
+  }
+  .lightbox .lightbox-content article .article-div .video-flex {
+    display: block;
+    width: 100% !important;
+  }
+  .lightbox .lightbox-content article .article-div .video-flex .video-flex-block {
+    width: 70%;
+    padding-top: 113.1666666667%;
+    margin: 8% 0 !important;
+  }
+  .lightbox .lightbox-content article .article-div .video-flex .video-flex-block video {
+    border-radius: 2vw;
+    -webkit-border-radius: 2vw;
+  }
+  .lightbox .lightbox-content article .article-div .video-flex .video-flex-block:nth-child(even) {
+    margin-left: 2% !important;
+  }
+  .lightbox .lightbox-content article .article-div .video-flex .video-flex-block:nth-child(odd) {
+    margin-left: 25% !important;
+  }
+  .lightbox .lightbox-content article .article-div .video-flex:nth-child(even) {
+    margin-left: 0 !important;
+  }
+  .lightbox .lightbox-content article .article-div .video-flex:nth-child(even)::before {
+    top: 47% !important;
+    bottom: auto !important;
+    left: 22% !important;
+    right: auto !important;
+  }
+  .lightbox .lightbox-content article .article-div .video-flex:nth-child(odd) {
+    margin-left: 0 !important;
+  }
+  .lightbox .lightbox-content article .article-div .video-flex:nth-child(odd)::before {
+    top: 47% !important;
+    bottom: auto !important;
+    right: 70% !important;
+    left: auto !important;
+  }
+  .lightbox .lightbox-content article .article-img > div {
+    margin: 8% 0 !important;
+  }
+  .lightbox .lightbox-content article .article-img > div:nth-child(even) {
+    width: 90% !important;
+    margin-left: 10% !important;
+  }
+  .lightbox .lightbox-content article .article-img > div:nth-child(odd) {
+    width: 90% !important;
+    margin-left: % !important;
+  }
+  .lightbox .lightbox-content article .article-img > div img {
+    border-radius: 2vw;
+    -webkit-border-radius: 2vw;
+  }
+  .lightbox .lightbox-content article .article-img > div img.m {
+    width: 65%;
+  }
+}
+@media only screen and (max-width: 640px) {
+  .lightbox .lightbox-close {
+    font-size: 5vw;
+    width: 9vw;
+    height: 9vw;
   }
 }/*# sourceMappingURL=style.css.map */

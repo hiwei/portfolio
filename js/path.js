@@ -3,7 +3,8 @@ import { getFullProject } from './main.js';
 var landingIndex = true;
 $(function() {
     detectLandingLocation();
-    // pathChange();
+    pathChange();
+    $('.buffering').hide();
 })
 
 var bufferingTime = 1000;
@@ -35,7 +36,7 @@ function pathChange() {
         clickable = true;
         $('.buffering').hide();
     }, bufferingTime + 500)
-    if(path == '/raw-test/' || path == '/' || path.indexOf('index') >= 0) {
+    if(path == '/portfolio-wei/' || path == '/' || path.indexOf('index') >= 0) {
         // 首頁
         goToIndex();
         return;
@@ -57,7 +58,7 @@ export function goToDetailPage(_array) {
     // 是否load過
     if($('.load-content').find('[data-load="'+_array.name+'"]').length == 0) {
         $('.load-content').append('<div data-load="'+_array.name+'"></div>');
-        $('[data-load="'+_array.name+'"]').load(_array.name+'.html', function() {
+        $('[data-load="'+_array.name+'"]').load('load/'+_array.name+'.html', function() {
             getFullProject();
         });
         
@@ -84,12 +85,23 @@ export function goToIndex() {
 export function detectLandingLocation() {
     var path = window.location.pathname;
     if(landingIndex) {
-        if(path == '/raw-test/' || path == '/' || path.indexOf('index') >= 0) {
+        if(path == '/portfolio-wei/' || path == '/' || path.indexOf('index') >= 0) {
         } else {
-            $('.wrap').addClass('no-transition');
-            setTimeout(function() {
-                $('.wrap').removeClass('no-transition');
-            }, 25)
+            $('.kv, .content, [data-load]').hide();
+            $('.load-content, [data-load="projects"]').show();
+            $(window).scrollTop(0);
+            // 載入
+            var _url = 'js/project.json';            
+            fetch(_url).then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok ' + response.statusText);
+                }
+                return response.json();
+            })
+            .then(data => {
+                var projectData = data.data;
+                getFullProject();
+            })
         }
     }
 }

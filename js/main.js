@@ -1,7 +1,21 @@
 var projectData;
+var isPC;
+
 $(function() {
     getProject();
+    resize();
+    $(window).resize(function(){resize()});
+
 })
+
+function resize() {
+    $('body, .wrap').css('height', window.innerHeight);
+    if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+        isPC = false;
+    } else {
+        isPC = true;
+    }
+}
 
 function getProject() {
     $('.loading').show();
@@ -150,58 +164,93 @@ $(document)
 .on('click', '.lightbox-close', function() {
     $('.lightbox').fadeOut();
 })
-
-
-
-.on('mousemove', '.kv-fix', function(e) {
-    var _x = (e.offsetX - window.innerWidth*0.5) * 0.01;
-    var _y = (e.offsetY - window.innerHeight*0.5) * 0.01;
-    $('.pool div').css('transform', 'scale('+ (_x/_y>1?1+(_x/_y)*0.01:1) +')')
-    $('.crystal img').css('transform', 'translate('+ _x +'%, '+ _y*0.75 +'%)')
-    $('.head img').css('transform', 'translate('+ -_x*0.5 +'%, '+ _y +'%)')
-    $('.cloud img').css('transform', 'translate('+ _x*1.5 +'%, '+ -_y*3 +'%)')
-    $('.computer img').css('transform', 'translate('+ -_x*0.5 +'%, '+ _y +'%) rotate('+ (_x/_y)*0.1 +'deg)')
-    $('.camera img').css('transform', 'translate('+ -_x*1.5 +'%, '+ -_y*2 +'%)')
-    $('.phone img').css('transform', 'translate('+ _x*3 +'%, '+ _y*3 +'%)').css('filter', 'hue-rotate('+ (_x/_y)*2.5 +'deg)')
-    $('.unicorn img').css('transform', 'translate('+ _x*1.5 +'%, '+ _y +'%) rotate('+ -_x*0.5 +'deg) scale('+ (_y>1?1+_y*0.1:1) +')')
-    $('.flower img').css('transform', 'translate('+ _x*2.5 +'%, '+ -_y*3 +'%) scale('+ (_y>1?1+_y*0.1:1) +')')
-    $('.doll img').css('transform', 'translate('+ -_x*2.5 +'%, '+ _y*3 +'%)')
-    $('.duck img').css('transform', 'translate('+ _x*5 +'%, '+ _y*5 +'%) rotate('+ _x*1.5 +'deg)')
-    $('.bag img').css('transform', 'translate('+ -_x*5 +'%, '+ _y*5 +'%) rotate('+ _x*1.5 +'deg)')
-    $('.eye img').css('transform', 'translate('+ -_x*3 +'%, '+ -_y*2.5 +'%) scale('+ (_y>1?1+_y*0.05:1) +')')
-    $('.teeth img').css('transform', 'translate('+ -_x*2.5 +'%, '+ _y*3 +'%) rotate('+ _x*1.5 +'deg)')
+.on('mousemove', '.kv', function(e) {
+    if(isPC) {
+        var _x = (e.offsetX - window.innerWidth*0.5) * 0.01;
+        var _y = (e.offsetY - window.innerHeight*0.5) * 0.01;
+        $('.pool div').css('transform', 'scale('+ (_x/_y>1?1+(_x/_y)*0.01:1) +')')
+        $('.crystal img').css('transform', 'translate('+ _x +'%, '+ _y*0.75 +'%)')
+        $('.head img').css('transform', 'translate('+ -_x*0.5 +'%, '+ _y +'%)')
+        $('.cloud img').css('transform', 'translate('+ _x*1.5 +'%, '+ -_y*3 +'%)')
+        $('.computer img').css('transform', 'translate('+ -_x*0.5 +'%, '+ _y +'%) rotate('+ (_x/_y)*0.1 +'deg)')
+        $('.camera img').css('transform', 'translate('+ -_x*1.5 +'%, '+ -_y*2 +'%)')
+        $('.phone img').css('transform', 'translate('+ _x*3 +'%, '+ _y*3 +'%)').css('filter', 'hue-rotate('+ (_x/_y)*2.5 +'deg)')
+        $('.unicorn img').css('transform', 'translate('+ _x*1.5 +'%, '+ _y +'%) rotate('+ -_x*0.5 +'deg)')
+        $('.flower img').css('transform', 'translate('+ _x*2.5 +'%, '+ -_y*3 +'%)')
+        $('.doll img').css('transform', 'translate('+ -_x*2.5 +'%, '+ _y*3 +'%)')
+        $('.duck img').css('transform', 'translate('+ _x*5 +'%, '+ _y*5 +'%) rotate('+ _x*1.5 +'deg)')
+        $('.bag img').css('transform', 'translate('+ -_x*5 +'%, '+ _y*5 +'%) rotate('+ _x*1.5 +'deg)')
+        $('.eye img').css('transform', 'translate('+ -_x*3 +'%, '+ -_y*2.5 +'%)')
+        $('.teeth img').css('transform', 'translate('+ -_x*2.5 +'%, '+ _y*3 +'%) rotate('+ _x*1.5 +'deg)')
+    }
 })
+var $scrollContainer;
+var ticking = false;
 
-$(window).scroll(function() {
-    var _p = $(window).scrollTop() / ($('.kv').height() - window.innerHeight)
-    $('.name-1').css('gap', parseInt(_p*30*window.innerHeight*0.01))
-    $('.name-2').css('gap', parseInt(_p*5*window.innerHeight*0.01))
-    $('.skill').css('gap', parseInt((_p*15 - 10)*2*window.innerHeight*0.01))
-    $('.pool').css('transform', 'translate('+ - _p*80 +'%, '+ ( -50 - _p*70) +'%)')
-    $('.crystal').css('transform', 'translate('+ - _p*60 +'%, '+ ( -50 - _p*80) +'%)')
-    $('.head').css('transform', 'translate('+ - _p*45 +'%, '+ ( -50 - _p*50) +'%) scale('+(1+_p*0.3)+')')
-    $('.cloud').css('transform', 'translate('+ _p*25 +'%, '+ ( -50 - _p*70) +'%) scale('+(1+_p*0.1)+')')
-    $('.computer').css('transform', 'translate('+ _p*45 +'%, '+ ( -50 - _p*70) +'%) scale('+(1+_p*0.2)+') rotate(8deg)')
-    $('.camera').css('transform', 'translate('+ _p*35 +'%, '+ ( -50 - _p*120) +'%) scale('+(1+_p*0.2)+') rotate(-8deg)')
-    $('.phone').css('transform', 'translate('+ - _p*5 +'%, '+ ( -50 - _p*150) +'%) scale('+(1+_p*0.2)+') rotate(-12deg)')
-    $('.unicorn').css('transform', 'translate('+ _p*85 +'%, '+ ( -50 - _p*20) +'%) rotate('+ (-8 + _p*15) +'deg)')
-    $('.flower').css('transform', 'translate('+ _p*50 +'%, '+ ( -50 - _p*150) +'%) scale('+(1+_p*1.25)+') rotate('+ _p*15 +'deg)')
-    $('.doll').css('transform', 'translate('+ -_p*50 +'%, '+ ( -50 - _p*200) +'%) rotate('+ -_p*15 +'deg)')
-    $('.duck').css('transform', 'translate('+ _p*150 +'%, '+ ( -50 - _p*200) +'%) rotate('+ _p*15 +'deg)')
-    $('.bag').css('transform', 'translate('+ -_p*25 +'%, '+ ( -50 - _p*150) +'%) scale('+(1+_p*0.25)+') rotate('+ -_p*15 +'deg)')
-    $('.eye').css('transform', 'translate('+ _p*150 +'%, '+ ( -50 - _p*225) +'%) rotate('+ _p*15 +'deg)')
-    $('.teeth').css('transform', 'translate('+ -_p*35 +'%, '+ ( -50 - _p*150) +'%) scale('+(1+_p*0.25)+') rotate('+ -_p*15 +'deg)')
+var scrollHandler = function() {
+    var scrollTop = $scrollContainer.scrollTop();
+    var kvHeight = $('.kv').height();
+    var _p = scrollTop / (kvHeight - window.innerHeight);
+
+    // transform / gap 更新
+    $('.name-1').css('gap', parseInt(_p*30*window.innerHeight*0.01));
+    $('.name-2').css('gap', parseInt(_p*5*window.innerHeight*0.01));
+    $('.skill').css('gap', parseInt((_p*15 - 10)*2*window.innerHeight*0.01));
+    $('.pool').css('transform', 'translate('+ - _p*80 +'%, '+ ( -50 - _p*70) +'%)');
+    $('.crystal').css('transform', 'translate('+ - _p*60 +'%, '+ ( -50 - _p*80) +'%)');
+    $('.head').css('transform', 'translate('+ - _p*45 +'%, '+ ( -50 - _p*50) +'%) scale('+(1+_p*0.3)+')');
+    $('.cloud').css('transform', 'translate('+ _p*25 +'%, '+ ( -50 - _p*70) +'%) scale('+(1+_p*0.1)+')');
+    $('.computer').css('transform', 'translate('+ _p*45 +'%, '+ ( -50 - _p*70) +'%) scale('+(1+_p*0.2)+') rotate(8deg)');
+    $('.camera').css('transform', 'translate('+ _p*35 +'%, '+ ( -50 - _p*120) +'%) scale('+(1+_p*0.2)+') rotate(-8deg)');
+    $('.phone').css('transform', 'translate('+ - _p*5 +'%, '+ ( -50 - _p*150) +'%) scale('+(1+_p*0.2)+') rotate(-12deg)');
+    $('.unicorn').css('transform', 'translate('+ _p*85 +'%, '+ ( -50 - _p*20) +'%) rotate('+ (-8 + _p*15) +'deg)');
+    $('.flower').css('transform', 'translate('+ _p*50 +'%, '+ ( -50 - _p*150) +'%) scale('+(1+_p*1.25)+') rotate('+ _p*15 +'deg)');
+    $('.doll').css('transform', 'translate('+ -_p*50 +'%, '+ ( -50 - _p*200) +'%) rotate('+ -_p*15 +'deg)');
+    $('.duck').css('transform', 'translate('+ _p*150 +'%, '+ ( -50 - _p*200) +'%) rotate('+ _p*15 +'deg)');
+    $('.bag').css('transform', 'translate('+ -_p*25 +'%, '+ ( -50 - _p*150) +'%) scale('+(1+_p*0.25)+') rotate('+ -_p*15 +'deg)');
+    $('.eye').css('transform', 'translate('+ _p*150 +'%, '+ ( -50 - _p*225) +'%) rotate('+ _p*15 +'deg)');
+    $('.teeth').css('transform', 'translate('+ -_p*35 +'%, '+ ( -50 - _p*150) +'%) scale('+(1+_p*0.25)+') rotate('+ -_p*15 +'deg)');
+
+    // kv-fix
     if(_p > 0.9) {
         $('.kv-fix').addClass('hide');
     } else {
         $('.kv-fix').removeClass('hide');
     }
 
+    // banner 判斷 → 改用 getBoundingClientRect() 更穩定
     if($('.banner').length > 0) {
-        if($(window).scrollTop() > $('.banner').offset().top - window.innerHeight*0.5) {
-            $('.banner').addClass('active')
+        var rect = document.querySelector('.banner').getBoundingClientRect();
+        if(rect.top < window.innerHeight * 0.75) {
+            $('.banner').addClass('active');
         } else {
-            $('.banner').removeClass('active')
+            $('.banner').removeClass('active');
         }
     }
-})
+};
+
+function bindScroll() {
+    if($scrollContainer) {
+        $scrollContainer.off('scroll._raf');
+    }
+    $scrollContainer = (window.innerWidth < 1024) ? $('.wrap') : $(window);
+
+    $scrollContainer.on('scroll._raf', function() {
+        if (!ticking) {
+            window.requestAnimationFrame(function() {
+                scrollHandler();
+                ticking = false;
+            });
+            ticking = true;
+        }
+    });
+
+    // 初始執行一次
+    scrollHandler();
+}
+
+// 初始化 + resize 監聽
+bindScroll();
+$(window).on('resize', function() {
+    bindScroll();
+});

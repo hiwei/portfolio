@@ -1,6 +1,6 @@
 <IfModule mod_rewrite.c>
   RewriteEngine On
-  RewriteBase /raw-test/
+  RewriteBase /portfolio-wei/
 
   # 如果請求的不是實體檔案或資料夾
   RewriteCond %{REQUEST_FILENAME} !-f
