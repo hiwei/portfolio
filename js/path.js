@@ -1,3 +1,5 @@
+import { getFullProject } from './main.js';
+
 var landingIndex = true;
 $(function() {
     detectLandingLocation();
@@ -32,7 +34,7 @@ function pathChange() {
     setTimeout(function() {
         clickable = true;
         $('.buffering').hide();
-    }, bufferingTime)
+    }, bufferingTime + 500)
     if(path == '/raw-test/' || path == '/' || path.indexOf('index') >= 0) {
         // 首頁
         goToIndex();
@@ -55,18 +57,27 @@ export function goToDetailPage(_array) {
     // 是否load過
     if($('.load-content').find('[data-load="'+_array.name+'"]').length == 0) {
         $('.load-content').append('<div data-load="'+_array.name+'"></div>');
-        $('[data-load="'+_array.name+'"]').load(_array.name+'.html');
+        $('[data-load="'+_array.name+'"]').load(_array.name+'.html', function() {
+            getFullProject();
+        });
+        
     }
     setTimeout(function() {
         $('.kv, .content, [data-load]').hide();
-        $('.load-content, [data-load="'+_array.name+'"]').show();
-    }, bufferingTime)
+        setTimeout(function() {
+            $('.load-content, [data-load="'+_array.name+'"]').show();
+            $(window).scrollTop(0);
+        }, 250)
+    }, bufferingTime + 250)
 }
 export function goToIndex() {
     setTimeout(function() {
         $('.load-content, [data-load]').hide();
-        $('.kv, .content').show();
-    }, bufferingTime)
+        setTimeout(function() {
+            $('.kv, .content').show();
+            $(window).scrollTop(0);
+        }, 250)
+    }, bufferingTime + 250)
 }
 
 // 偵測進入網站是否直接進分頁

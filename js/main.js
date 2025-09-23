@@ -1,9 +1,7 @@
 var projectData;
 $(function() {
     getProject();
-    // getFullProject();
 })
-
 
 function getProject() {
     $('.loading').show();
@@ -25,14 +23,11 @@ function getProject() {
             `)
         }
         $('.loading').fadeOut();
-        console.log(projectData.length)
-        getFullProject();
     })
 }
 
-function getFullProject() {
+export function getFullProject() {
     $('.loading').show();
-    console.log(projectData.length)
     $('.project-content').empty();
     for(var i=0; i<projectData.length; i++) {
         $('.project-content').append(`
@@ -44,6 +39,7 @@ function getFullProject() {
             </div>
         `);
     }
+    $('.loading').fadeOut();
 }
 
 $(document)
