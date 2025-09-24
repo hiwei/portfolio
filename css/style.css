@@ -211,6 +211,7 @@ a {
   border: 2px solid #1936ed;
   border-radius: 135% 150% 125% 150%/175% 125% 170% 125%;
   letter-spacing: 0.1vw;
+  white-space: nowrap;
   transition: filter 0.5s;
   filter: drop-shadow(-1px 1px 0 #fff022);
 }
@@ -505,15 +506,16 @@ a {
     width: 10%;
   }
   .lightbox .lightbox-content .content-title a {
-    font-size: 5vw;
-    padding: 10% 15%;
+    font-size: 4vw;
+    padding: 15% 25%;
     margin-left: -15%;
   }
-  .lightbox .lightbox-content .content-title a::before {
-    white-space: nowrap;
+  .lightbox .lightbox-content .content-title a:not(.disabled) {
+    background: #1936ed;
+    color: #fff022;
   }
   .lightbox .lightbox-content .content-title h4 {
-    font-size: 4vw;
+    font-size: 3.5vw;
     padding-left: 0;
   }
   .lightbox .lightbox-content .content-title h4 br {

@@ -178,6 +178,7 @@ a
                 border: 2px solid $main
                 border-radius: 135% 150% 125% 150% / 175% 125% 170% 125%
                 letter-spacing: 0.1vw
+                white-space: nowrap
                 transition: filter 0.5s
                 filter: drop-shadow(-1px 1px 0 $vise)
                 &:not(.disabled)
@@ -410,13 +411,14 @@ a
                 top: 10%
                 width: 10%
                 a
-                    font-size: 5vw
-                    padding: 10% 15%
-                    margin-left: -15%
-                    &::before
-                        white-space: nowrap
-                h4
                     font-size: 4vw
+                    padding: 15% 25%
+                    margin-left: -15%
+                    &:not(.disabled)
+                        background: $main
+                        color: $vise
+                h4
+                    font-size: 3.5vw
                     padding-left: 0
                     br
                         display: none
