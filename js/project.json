@@ -143,6 +143,53 @@
             "website": "",
             "images": [
             ]
+        },
+        {
+            "capture": "img/project/p-10-cap.jpg",
+            "title": "咖哩樹",
+            "company": "金色三麥",
+            "mainImg": "",
+            "mainVideo": "img/project/p-10-vid.mp4",
+            "content": "",
+            "website": "https://www.currytree.com.tw/",
+            "images": [
+                "img/project/p-10-1.jpg",
+                "img/project/p-10-2.jpg",
+                "img/project/p-10-3.jpg",
+                "img/project/p-10-4.jpg",
+                "img/project/p-10-5.jpg"
+            ]
+        },
+        {
+            "capture": "img/project/p-11-cap.jpg",
+            "title": "北海鱈魚香絲",
+            "company": "有豐",
+            "mainImg": "",
+            "mainVideo": "img/project/p-11-vid.mp4",
+            "content": "",
+            "website": "https://www.yofeng.com.tw/",
+            "images": [
+                "img/project/p-11-1.jpg",
+                "img/project/p-11-2.jpg",
+                "img/project/p-11-3.jpg",
+                "img/project/p-11-4.jpg",
+                "img/project/p-11-5.jpg",
+                "img/project/p-11-6.jpg"
+            ]
+        },
+        {
+            "capture": "img/project/p-12-cap.jpg",
+            "title": "南山2025<br>新年互動",
+            "company": "南山人壽",
+            "mainImg": "",
+            "mainVideo": "img/project/p-12-vid.mp4",
+            "content": "<div class='video-div'><video muted autoplay playsinline loop src='img/project/p-12-vid-1.mp4' type='video/mp4'></video></div>",
+            "website": "",
+            "images": [
+                "img/project/p-12-1.jpg",
+                "img/project/p-12-2.jpg",
+                "img/project/p-12-3.jpg"
+            ]
         }
         
         
