@@ -64,6 +64,7 @@ html {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  font-family: "Noto Serif TC";
 }
 .resume-wrap .info div:nth-child(1) {
   width: 20%;
