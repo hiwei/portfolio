@@ -9,7 +9,7 @@ html {
   color: #333;
   font-size: 1rem;
   letter-spacing: 1px;
-  font-family: "DM Serif Display", "Noto Serif TC";
+  font-family: "Noto Serif TC";
 }
 .resume-wrap .title {
   position: relative;
@@ -19,6 +19,7 @@ html {
   padding: 15% 0 10% 0;
 }
 .resume-wrap .title h1 {
+  font-family: "DM Serif Display";
   font-style: italic;
   font-size: 6rem;
   line-height: 80%;
@@ -40,6 +41,7 @@ html {
   filter: drop-shadow(0 15px 0 #333) drop-shadow(0 30px 0 #333);
 }
 .resume-wrap h4 {
+  font-family: "DM Serif Display";
   font-size: 1.25rem;
   font-style: italic;
   margin-bottom: 0.5rem;
@@ -51,6 +53,7 @@ html {
   gap: 1rem;
 }
 .resume-wrap .intro h3 {
+  font-family: "DM Serif Display";
   white-space: nowrap;
   font-size: 2rem;
 }
@@ -64,7 +67,6 @@ html {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  font-family: "Noto Serif TC";
 }
 .resume-wrap .info div:nth-child(1) {
   width: 20%;
@@ -128,7 +130,7 @@ html {
   content: "▴";
   top: 50%;
   left: 0;
-  transform: translate(0, -45%) scale(0.9) rotate(-125deg);
+  transform: translate(0, -40%) scale(0.8) rotate(-145deg);
 }
 .resume-wrap .experience .content .content-block article {
   position: relative;
@@ -163,6 +165,7 @@ html {
   width: 100%;
   padding-top: 65%;
   border: 1px solid #333;
+  font-family: "DM Serif Display";
   font-style: italic;
   white-space: nowrap;
   border-radius: 50%;
@@ -203,7 +206,6 @@ html {
   flex-wrap: wrap;
   margin-top: 1rem;
   font-size: 0.9rem;
-  font-family: "Noto Serif TC";
 }
 .resume-wrap .cooperation .content article p {
   position: relative;
