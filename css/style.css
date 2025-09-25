@@ -387,7 +387,7 @@ a {
   box-shadow: 0 0.5vw 2vw -1vw rgba(0, 0, 0, 0.25);
 }
 .lightbox .lightbox-content article .article-img > div img.m {
-  width: 65%;
+  width: 60%;
   margin: auto;
 }
 .lightbox .lightbox-content article .article-img > div:nth-child(10n) {
@@ -400,15 +400,15 @@ a {
 }
 .lightbox .lightbox-content article .article-img > div:nth-child(10n+2) {
   margin-left: 5%;
-  width: 75%;
+  width: 72%;
 }
 .lightbox .lightbox-content article .article-img > div:nth-child(10n+3) {
-  margin-left: 15%;
-  width: 60%;
+  margin-left: 21%;
+  width: 65%;
 }
 .lightbox .lightbox-content article .article-img > div:nth-child(10n+4) {
   margin-left: 5%;
-  width: 75%;
+  width: 72%;
   margin-top: 10%;
 }
 .lightbox .lightbox-content article .article-img > div:nth-child(10n+5) {
@@ -417,7 +417,7 @@ a {
 }
 .lightbox .lightbox-content article .article-img > div:nth-child(10n+6) {
   margin-left: 18%;
-  width: 75%;
+  width: 73%;
   margin-top: 5%;
 }
 .lightbox .lightbox-content article .article-img > div:nth-child(10n+7) {
@@ -427,11 +427,11 @@ a {
 }
 .lightbox .lightbox-content article .article-img > div:nth-child(10n+8) {
   margin-left: 8%;
-  width: 60%;
+  width: 67%;
 }
 .lightbox .lightbox-content article .article-img > div:nth-child(10n+9) {
-  margin-left: 35%;
-  width: 60%;
+  margin-left: 32%;
+  width: 64%;
 }
 
 @media only screen and (min-width: 1025px) {

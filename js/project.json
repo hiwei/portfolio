@@ -190,6 +190,154 @@
                 "img/project/p-12-2.jpg",
                 "img/project/p-12-3.jpg"
             ]
+        },
+        {
+            "capture": "img/project/p-13-cap.jpg",
+            "title": "睡豬大亂鬥",
+            "company": "綠油精",
+            "mainImg": "img/project/p-13-main.jpg",
+            "mainVideo": "",
+            "content": "<div class='video-flex'><div class='video-flex-block'><video muted autoplay playsinline loop src='img/project/p-13-vid-1.mp4' type='video/mp4'></video></div></div>",
+            "website": "",
+            "images": [
+                "img/project/p-13-1.jpg",
+                "img/project/p-13-2.jpg",
+                "img/project/p-13-3.jpg",
+                "img/project/p-13-4.jpg",
+                "img/project/p-13-5.jpg"
+            ]
+        },
+        {
+            "capture": "img/project/p-14-cap.jpg",
+            "title": "排球少年",
+            "company": "眼鏡市場",
+            "mainImg": "",
+            "mainVideo": "img/project/p-14-vid.mp4",
+            "content": "",
+            "website": "https://campaign.meganeichiba.com.tw/haikyu/",
+            "images": [
+                "img/project/p-14-1.jpg",
+                "img/project/p-14-2.jpg",
+                "img/project/p-14-3.jpg",
+                "img/project/p-14-4.jpg",
+                "img/project/p-14-5.jpg"
+            ]
+        },
+        {
+            "capture": "img/project/p-15-cap.jpg",
+            "title": "娜美妍",
+            "company": "Ravilam",
+            "mainImg": "img/project/p-15-main.jpg",
+            "mainVideo": "",
+            "content": "",
+            "website": "",
+            "images": [
+                "img/project/p-15-1.jpg",
+                "img/project/p-15-2.jpg",
+                "img/project/p-15-3.jpg",
+                "img/project/p-15-4.jpg",
+                "img/project/p-15-5.jpg",
+                "img/project/p-15-6.jpg",
+                "img/project/p-15-7.jpg"
+            ]
+        },
+        {
+            "capture": "img/project/p-16-cap.jpg",
+            "title": "LINE Marketplace",
+            "company": "LINE",
+            "mainImg": "img/project/p-16-main.jpg",
+            "mainVideo": "",
+            "content": "",
+            "website": "https://tw.line-oa-marketplace.com/",
+            "images": [
+                "img/project/p-16-1.jpg",
+                "img/project/p-16-2.jpg",
+                "img/project/p-16-3.jpg",
+                "img/project/p-16-4.jpg",
+                "img/project/p-16-5.jpg",
+                "img/project/p-16-6.jpg",
+                "img/project/p-16-7.jpg"
+            ]
+        },
+        {
+            "capture": "img/project/p-17-cap.jpg",
+            "title": "All New SX4",
+            "company": "SUZUKI",
+            "mainImg": "",
+            "mainVideo": "img/project/p-17-vid.mp4",
+            "content": "<div class='video-div'><video muted autoplay playsinline loop src='img/project/p-17-vid-1.mp4' type='video/mp4'></video></div><div class='video-div'><video muted autoplay playsinline loop src='img/project/p-17-vid-2.mp4' type='video/mp4'></video></div>",
+            "website": "",
+            "images": [
+                "img/project/p-17-1.jpg",
+                "img/project/p-17-2.jpg",
+                "img/project/p-17-3.jpg",
+                "img/project/p-17-4.jpg",
+                "img/project/p-17-5.jpg"
+            ]
+        },
+        {
+            "capture": "img/project/p-18-cap.jpg",
+            "title": "南山健康樂活村",
+            "company": "南山人壽",
+            "mainImg": "img/project/p-18-main.jpg",
+            "mainVideo": "",
+            "content": "",
+            "website": "https://health.nanshanlife.com.tw/%E4%B8%BB%E9%A1%8C%E6%9C%8D%E5%8B%99/%E5%81%A5%E5%BA%B7%E6%A8%82%E6%B4%BB%E5%9C%B0%E5%9C%96",
+            "images": [
+                "img/project/p-18-1.jpg",
+                "img/project/p-18-2.jpg",
+                "img/project/p-18-3.jpg",
+                "img/project/p-18-4.jpg",
+                "img/project/p-18-5.jpg"
+            ]
+        },
+        {
+            "capture": "img/project/p-19-cap.jpg",
+            "title": "喝爆能AI活動",
+            "company": "PowerBOMB",
+            "mainImg": "img/project/p-19-main.jpg",
+            "mainVideo": "",
+            "content": "<div class='video-flex'><div class='video-flex-block'><video muted autoplay playsinline loop src='img/project/p-19-vid-1.mp4' type='video/mp4'></video></div></div>",
+            "website": "",
+            "images": [
+                "img/project/p-19-1.jpg",
+                "img/project/p-19-2.jpg",
+                "img/project/p-19-3.jpg",
+                "img/project/p-19-4.jpg",
+                "img/project/p-19-5.jpg"
+            ]
+        },
+        {
+            "capture": "img/project/p-20-cap.jpg",
+            "title": "福樂以愛灌溉",
+            "company": "佳格福樂",
+            "mainImg": "",
+            "mainVideo": "img/project/p-20-vid.mp4",
+            "content": "",
+            "website": "",
+            "images": [
+                "img/project/p-20-1.jpg",
+                "img/project/p-20-2.jpg",
+                "img/project/p-20-3.jpg",
+                "img/project/p-20-4.jpg"
+            ]
+        },
+        {
+            "capture": "img/project/p-21-cap.jpg",
+            "title": "萬能視務所",
+            "company": "眼鏡市場",
+            "mainImg": "",
+            "mainVideo": "img/project/p-21-vid.mp4",
+            "content": "",
+            "website": "",
+            "images": [
+                "img/project/p-21-1.jpg",
+                "img/project/p-21-2.jpg",
+                "img/project/p-21-3.jpg",
+                "img/project/p-21-4.jpg",
+                "img/project/p-21-5.jpg",
+                "img/project/p-21-6.jpg"
+            ]
         }
         
         
