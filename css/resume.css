@@ -1,0 +1,314 @@
+@charset "UTF-8";
+html {
+  font-size: 20px;
+}
+
+.resume-wrap {
+  max-width: 1024px;
+  margin: auto;
+  color: #333;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  font-family: "DM Serif Display", "Noto Serif TC";
+}
+.resume-wrap .title {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 15% 0 10% 0;
+}
+.resume-wrap .title h1 {
+  font-style: italic;
+  font-size: 6rem;
+  line-height: 80%;
+  font-weight: normal;
+}
+.resume-wrap .title h2 {
+  font-size: 1.25rem;
+  letter-spacing: 3px;
+}
+.resume-wrap .title p {
+  position: absolute;
+  top: 35%;
+  right: 0;
+  width: 45%;
+  padding-top: 10%;
+  border: 1px solid #333;
+  border-radius: 100%;
+  -webkit-border-radius: 100%;
+  filter: drop-shadow(0 15px 0 #333) drop-shadow(0 30px 0 #333);
+}
+.resume-wrap h4 {
+  font-size: 1.25rem;
+  font-style: italic;
+  margin-bottom: 0.5rem;
+}
+.resume-wrap .intro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.resume-wrap .intro h3 {
+  white-space: nowrap;
+  font-size: 2rem;
+}
+.resume-wrap .intro p {
+  flex: 1 0 0;
+  height: 1px;
+  background: #333;
+}
+.resume-wrap .info {
+  padding: 10% 0 5% 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.resume-wrap .info div:nth-child(1) {
+  width: 20%;
+}
+.resume-wrap .info div:nth-child(2) {
+  width: 65%;
+}
+.resume-wrap .experience {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 5% 0;
+}
+.resume-wrap .experience .deco {
+  position: sticky;
+  top: 1.5rem;
+  width: 35%;
+}
+.resume-wrap .experience .deco p {
+  position: relative;
+  width: 70%;
+  padding-top: 70%;
+  border: 1px solid #333;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+}
+.resume-wrap .experience .deco p span {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 10%;
+  left: 0;
+  border: 1px solid #333;
+  border-radius: 130% 175% 145% 145%/175% 155% 140% 125%;
+}
+.resume-wrap .experience .content {
+  width: 65%;
+}
+.resume-wrap .experience .content .content-block h5 {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+}
+.resume-wrap .experience .content .content-block h5 span {
+  font-size: 0.7em;
+}
+.resume-wrap .experience .content .content-block div p {
+  font-size: 0.9rem;
+  font-weight: normal;
+  margin: 0.25rem 0;
+}
+.resume-wrap .experience .content .content-block p {
+  position: relative;
+  font-weight: bold;
+  padding-left: 1rem;
+  margin: 0.5rem 0;
+}
+.resume-wrap .experience .content .content-block p::before {
+  position: absolute;
+  display: block;
+  content: "▴";
+  top: 50%;
+  left: 0;
+  transform: translate(0, -45%) scale(0.9) rotate(-125deg);
+}
+.resume-wrap .experience .content .content-block article {
+  position: relative;
+  font-size: 0.9rem;
+  margin: 0.5rem 0;
+  padding-left: 2rem;
+}
+.resume-wrap .experience .content .content-block article::before {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 1px;
+  height: 90%;
+  left: 1.5rem;
+  top: 50%;
+  background: #333;
+  transform: translateY(-50%);
+}
+.resume-wrap .cooperation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row-reverse;
+  padding: 5% 0 10% 0;
+}
+.resume-wrap .cooperation .deco {
+  width: 35%;
+}
+.resume-wrap .cooperation .deco a {
+  display: block;
+  position: relative;
+  width: 100%;
+  padding-top: 65%;
+  border: 1px solid #333;
+  font-style: italic;
+  white-space: nowrap;
+  border-radius: 50%;
+  border-radius: 175% 155% 150% 175%/180% 190% 145% 155%;
+  box-shadow: 0 1rem 0 -0.25rem #333;
+  transition: filter 0.5s, box-shadow 0.5s;
+}
+.resume-wrap .cooperation .deco a span {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2rem;
+}
+.resume-wrap .cooperation .deco a span::after {
+  position: relative;
+  display: inline-block;
+  content: "→";
+  top: 1px;
+  margin-left: 0.5rem;
+  transform: scale(0.8);
+  animation: arrow 0.5s infinite alternate;
+}
+@keyframes arrow {
+  to {
+    transform: translateX(15%) scale(0.9);
+  }
+}
+.resume-wrap .cooperation .content {
+  width: 60%;
+}
+.resume-wrap .cooperation .content article {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  font-family: "Noto Serif TC";
+}
+.resume-wrap .cooperation .content article p {
+  position: relative;
+  padding-right: 1.5rem;
+}
+.resume-wrap .cooperation .content article p::before {
+  display: block;
+  position: absolute;
+  content: "／";
+  right: 0;
+  transform: scale(0.6) rotate(-15deg);
+}
+
+@media only screen and (min-width: 1025px) {
+  .cooperation .deco a:hover {
+    box-shadow: 0 2rem 0.5rem -0.75rem #333;
+    filter: blur(2px);
+  }
+}
+@media only screen and (max-width: 1024px) {
+  html {
+    font-size: 16px;
+  }
+  .resume-wrap {
+    max-width: 600px;
+  }
+  .resume-wrap .title p {
+    top: 25%;
+  }
+  .resume-wrap .cooperation {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column-reverse;
+    flex-wrap: wrap;
+  }
+  .resume-wrap .cooperation .deco {
+    width: 45%;
+    margin-top: 5%;
+    margin-right: 5%;
+  }
+  .resume-wrap .cooperation .content {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 640px) {
+  html {
+    font-size: 4vw;
+  }
+  .resume-wrap {
+    width: 90%;
+    letter-spacing: 0.15vw;
+  }
+  .resume-wrap .title {
+    padding: 20% 0 15% 0;
+  }
+  .resume-wrap .title h1 {
+    font-size: 3.5rem;
+  }
+  .resume-wrap .title h2 {
+    font-size: 1rem;
+    letter-spacing: 0.5vw;
+  }
+  .resume-wrap .title p {
+    filter: drop-shadow(0 15px 0 #333);
+  }
+  .resume-wrap .intro h3 {
+    font-size: 1.5rem;
+  }
+  .resume-wrap .info {
+    padding: 15% 0 5% 0;
+  }
+  .resume-wrap .info div:nth-child(1) {
+    width: 35%;
+  }
+  .resume-wrap .info div:nth-child(2) {
+    width: 57%;
+  }
+  .resume-wrap .experience {
+    display: block;
+    padding: 5% 0;
+  }
+  .resume-wrap .experience .deco {
+    position: static;
+    width: 50%;
+  }
+  .resume-wrap .experience .deco p span {
+    top: 5%;
+    left: 5%;
+  }
+  .resume-wrap .experience .content {
+    width: 100%;
+    margin-top: 10%;
+  }
+  .resume-wrap .cooperation {
+    padding: 5% 0 20% 0;
+  }
+  .resume-wrap .cooperation .deco {
+    width: 55%;
+  }
+  .resume-wrap .cooperation .deco a span {
+    font-size: 1.5rem;
+  }
+  .resume-wrap .cooperation .content article {
+    gap: 0.25rem;
+  }
+  .resume-wrap .cooperation .content article p {
+    padding-right: 1.25rem;
+  }
+}/*# sourceMappingURL=resume.css.map */
