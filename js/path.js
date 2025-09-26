@@ -36,7 +36,7 @@ function pathChange() {
         clickable = true;
         $('.buffering').hide();
     }, bufferingTime + 500)
-    if(path == '/portfolio' || path == '/' || path.indexOf('index') >= 0) {
+    if(path == '/portfolio/' || path == '/' || path.indexOf('index') >= 0) {
         // 首頁
         goToIndex();
         return;
@@ -86,10 +86,10 @@ export function detectLandingLocation() {
     var path = window.location.pathname;
     console.log(path)
     if(landingIndex) {
-        if(path == '/portfolio' || path == '/' || path.indexOf('index') >= 0) {
+        if(path == '/portfolio/' || path == '/' || path.indexOf('index') >= 0) {
         } else {
-            // $('.kv, .content, [data-load]').hide();
-            // $('.load-content, [data-load="projects"]').show();
+            $('.kv, .content, [data-load]').hide();
+            $('.load-content, [data-load="projects"]').show();
             $(window).scrollTop(0);
             // 載入
             var _url = 'js/project.json';            
