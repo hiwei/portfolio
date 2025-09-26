@@ -2,6 +2,7 @@ import { getFullProject } from './main.js';
 
 var landingIndex = true;
 $(function() {
+    detectUrlTarget();
     detectLandingLocation();
     pathChange();
     $('.buffering').hide();
@@ -104,4 +105,10 @@ export function detectLandingLocation() {
             })
         }
     }
+}
+
+function detectUrlTarget() {
+    var _path = new URLSearchParams(new URL(window.location.href).search);
+    history.pushState(null, '', _path.get('target'));
+    $(window).trigger('routechange');
 }
