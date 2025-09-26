@@ -84,7 +84,6 @@ export function goToIndex() {
 // 偵測進入網站是否直接進分頁
 export function detectLandingLocation() {
     var path = window.location.pathname;
-    console.log(path)
     if(landingIndex) {
         if(path == '/portfolio/' || path == '/' || path.indexOf('index') >= 0) {
         } else {
