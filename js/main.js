@@ -42,6 +42,26 @@ function getProject() {
 export function getFullProject() {
     $('.loading').show();
     $('.project-content').empty();
+    if(projectData == undefined) {
+        var _url = 'js/project.json';            
+        fetch(_url).then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok ' + response.statusText);
+            }
+            return response.json();
+        })
+        .then(data => {
+            projectData = data.data;
+            renderFullProjects();
+        })
+    } else {
+        renderFullProjects();
+    }
+    
+    $('.loading').fadeOut();
+}
+
+function renderFullProjects() {
     for(var i=0; i<projectData.length; i++) {
         $('.project-content').append(`
             <div class="project-block">
@@ -52,7 +72,6 @@ export function getFullProject() {
             </div>
         `);
     }
-    $('.loading').fadeOut();
 }
 
 $(document)

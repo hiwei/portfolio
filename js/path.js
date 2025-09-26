@@ -62,7 +62,6 @@ export function goToDetailPage(_array) {
         $('[data-load="'+_array.name+'"]').load('load/'+_array.name+'.html', function() {
             getFullProject();
         });
-        
     }
     setTimeout(function() {
         $('.kv, .content, [data-load]').hide();
@@ -89,20 +88,6 @@ export function detectLandingLocation() {
         if(path == '/portfolio/' || path == '/' || path.indexOf('index') >= 0) {
         } else {
             $('.kv, .content, [data-load]').hide();
-            $('.load-content, [data-load="projects"]').show();
-            $(window).scrollTop(0);
-            // 載入
-            var _url = 'js/project.json';            
-            fetch(_url).then(response => {
-                if (!response.ok) {
-                    throw new Error('Network response was not ok ' + response.statusText);
-                }
-                return response.json();
-            })
-            .then(data => {
-                var projectData = data.data;
-                getFullProject();
-            })
         }
     }
 }
@@ -110,5 +95,4 @@ export function detectLandingLocation() {
 function detectUrlTarget() {
     var _path = new URLSearchParams(new URL(window.location.href).search);
     history.pushState(null, '', _path.get('target'));
-    // $(window).trigger('routechange');
 }
