@@ -36,7 +36,7 @@ function pathChange() {
         clickable = true;
         $('.buffering').hide();
     }, bufferingTime + 500)
-    if(path == '/portfolio-wei/' || path == '/' || path.indexOf('index') >= 0) {
+    if(path == '/portfolio' || path == '/' || path.indexOf('index') >= 0) {
         // 首頁
         goToIndex();
         return;
@@ -85,7 +85,7 @@ export function goToIndex() {
 export function detectLandingLocation() {
     var path = window.location.pathname;
     if(landingIndex) {
-        if(path == '/portfolio-wei/' || path == '/' || path.indexOf('index') >= 0) {
+        if(path == '/portfolio' || path == '/' || path.indexOf('index') >= 0) {
         } else {
             $('.kv, .content, [data-load]').hide();
             $('.load-content, [data-load="projects"]').show();
