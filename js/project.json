@@ -338,8 +338,56 @@
                 "img/project/p-21-5.jpg",
                 "img/project/p-21-6.jpg"
             ]
+        },
+        {
+            "capture": "img/project/p-22-cap.jpg",
+            "title": "STIRAK",
+            "company": "STIRAK",
+            "mainImg": "img/project/p-22-main.jpg",
+            "mainVideo": "",
+            "content": "",
+            "website": "",
+            "images": [
+                "img/project/p-22-1.jpg",
+                "img/project/p-22-2.jpg",
+                "img/project/p-22-3.jpg",
+                "img/project/p-22-4.jpg",
+                "img/project/p-22-5.jpg"
+            ]
+        },
+        {
+            "capture": "img/project/p-23-cap.jpg",
+            "title": "火星創集",
+            "company": "Mars",
+            "mainImg": "img/project/p-23-main.jpg",
+            "mainVideo": "",
+            "content": "",
+            "website": "https://www.marsmarketing.com.tw/",
+            "images": [
+                "img/project/p-23-1.jpg",
+                "img/project/p-23-2.jpg",
+                "img/project/p-23-3.jpg",
+                "img/project/p-23-4.jpg",
+                "img/project/p-23-5.jpg"
+            ]
+        },
+        {
+            "capture": "img/project/p-24-cap.jpg",
+            "title": "健檢知識家",
+            "company": "南山人壽",
+            "mainImg": "img/project/p-24-main.jpg",
+            "mainVideo": "",
+            "content": "",
+            "website": "https://health.nanshanlife.com.tw/%E4%B8%BB%E9%A1%8C%E6%9C%8D%E5%8B%99/%E5%81%A5%E6%AA%A2%E7%9F%A5%E8%AD%98%E5%AE%B6",
+            "images": [
+                "img/project/p-24-1.jpg",
+                "img/project/p-24-2.jpg",
+                "img/project/p-24-3.jpg",
+                "img/project/p-24-4.jpg",
+                "img/project/p-24-5.jpg",
+                "img/project/p-24-6.jpg"
+            ]
         }
-        
         
     ]
 }
