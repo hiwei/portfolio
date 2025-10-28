@@ -149,6 +149,26 @@
     padding: 0 1.5%
     border-radius: 100%
 
+.back-bottom
+    position: relative
+    display: block
+    font-family: DM Serif Display
+    font-size: 3vw
+    width: 15%
+    margin: 5% auto
+    color: $main
+    text-align: center
+    transition: filter 0.5s, transform 0.5s
+    &::before
+        display: block
+        content: ''
+        +centerAb
+        top: 15%
+        width: 90%
+        height: 80%
+        border: 2px solid $main
+        +circle
+
 @media only screen and (min-width: 1025px)
     .project-content
         .project-block
@@ -197,6 +217,9 @@
                         > div
                             transform: scale(1)
 
+    .back-bottom:hover
+        filter: blur(3px)
+
 @media only screen and (max-width: 1024px)
 
     .project-kv
@@ -230,6 +253,11 @@
     .back
         font-size: 4vw
 
+    .back-bottom
+        font-size: 5vw
+        width: 25%
+        margin: 10% auto
+
 @media only screen and (max-width: 640px)
     .project-content
         gap: 6vw
@@ -241,3 +269,6 @@
                 font-size: 3vw
     .back
         font-size: 6vw
+    .back-bottom
+        font-size: 7vw
+        width: 35%
